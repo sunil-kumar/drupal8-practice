@@ -11,6 +11,7 @@ class HelloController extends ControllerBase {
   public function content($name) {
     return array(
       '#type' => 'markup',
+
      // '#markup' => t('Welcome to Sixtynine Page.'),
       '#markup' => $this->t('Hello @name', array('@name' => $name)),
     );
