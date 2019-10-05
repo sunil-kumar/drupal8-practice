@@ -1,5 +1,5 @@
 hello.content:
-  path: '/hello/{name}
+  path: '/hello/{name}'
   defaults:
     _controller: 'Drupal\sixtynine_route\Controller\HelloController::content'
     _title: 'Welcome to Routing Concept'
