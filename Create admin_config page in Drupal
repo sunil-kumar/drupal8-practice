@@ -1,0 +1,22 @@
+Add to the admin/config page
+
+Step1: Create Menu
+ycloud_vy_register_hub.yhub_config_menu:
+  title: 'Y Hub'
+  route_name: ycloud_vy_register_hub.yhub_config_menu
+  description: 'Y Hub'
+  parent: system.admin_config_services
+  weight: 99
+  
+Step2: Create routing
+ycloud_vy_register_hub.yhub_config_menu:
+  path: '/admin/config/yhub/menu'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'      
+    _title: 'Y Hub'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE 
+    
+Step3: drush cr
